@@ -123,33 +123,41 @@ function initEnquiryForm() {
   });
 }
 
-function handleEnquirySubmit(form, status) {
-  const name = form.name.value.trim();
-  const mobile = form.mobile.value.trim();
-  const message = form.message.value.trim();
+async function handleEnquirySubmit(event) {
+  event.preventDefault();
 
-  if (!name || !mobile || !message) {
-    status.textContent = 'Please fill in every field before sending.';
-    status.className = 'form-status is-error';
-    return;
+  const form = event.target;
+
+  // ...keep your existing validation checks here...
+  // if invalid, return early as you already do
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // show your existing confirmation message here
+      showEnquiryConfirmation();
+      form.reset();
+    } else {
+      const result = await response.json();
+      const errorMsg = result.errors
+        ? result.errors.map(e => e.message).join(', ')
+        : 'Something went wrong. Please try again.';
+      showEnquiryError(errorMsg);
+    }
+  } catch (err) {
+    showEnquiryError('Network error — please try again.');
   }
-
-  // Very light phone check — loosen/tighten this to suit your market
-  const mobilePattern = /^[0-9+\s()-]{8,}$/;
-  if (!mobilePattern.test(mobile)) {
-    status.textContent = 'That mobile number doesn\'t look right — please check it.';
-    status.className = 'form-status is-error';
-    return;
-  }
-
-  // EDIT: replace this block with a real submission (see comment above)
-  console.log('Enquiry submitted:', { name, mobile, message });
-
-  status.textContent = `Thanks ${name.split(' ')[0]}, we've got your enquiry and will be in touch shortly.`;
-  status.className = 'form-status is-success';
-  form.reset();
 }
 
+document.getElementById('enquiry-form')
+  .addEventListener('submit', handleEnquirySubmit);
 /* --------------------------------------------------------------
    Footer year
    -------------------------------------------------------------- */
