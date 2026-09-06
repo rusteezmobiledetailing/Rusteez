@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rusteez | Car Detailing</title>
+  <!-- EDIT: swap in a real meta description for search engines -->
+  <meta name="description" content="Rusteez Car Detailing — paint correction, interior detailing, ceramic coating and full vehicle care." />
+
+  <!-- Fonts: Oswald (headings/industrial display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EDIT: replace with your own favicon -->
+  <!-- <link rel="icon" href="favicon.ico"> -->
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- TOP NAV BAR                    -->
+  <!-- ============================= -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">
+        <!-- EDIT: replace this text logo with <img src="your-logo.svg" alt="Rusteez logo"> if you have one -->
+        <span class="logo-mark">R</span>
+        <span class="logo-text">RUSTEEZ</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#our-work" class="nav-link">Our Work</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#enquiry" class="nav-link nav-cta">Enquiry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================= -->
+    <!-- HOME / HERO SECTION             -->
+    <!-- ============================= -->
+    <section id="home" class="hero">
+      <!-- EDIT: replace the gradient below with a real hero photo by adding
+           background-image to .hero in style.css, or dropping an <img> here -->
+      <div class="hero-shine" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Mobile &amp; In-Studio Detailing <!-- EDIT: your location / service area --></p>
+        <h1 class="hero-title">BRING BACK<br>THE SHINE.</h1>
+        <p class="hero-desc">
+          <!-- EDIT: 2–3 sentence description of the work you do -->
+          From daily drivers to weekend builds, Rusteez restores paint, interior and
+          undercarriage back to showroom condition. Every vehicle gets the same
+          obsessive attention to detail — no shortcuts, no rush.
+        </p>
+        <div class="hero-actions">
+          <a href="#enquiry" class="btn btn-primary">Book an Enquiry</a>
+          <a href="#our-work" class="btn btn-ghost">See Our Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- OUR WORK SECTION                -->
+    <!-- ============================= -->
+    <section id="our-work" class="work">
+      <div class="section-head">
+        <p class="eyebrow">Our Work</p>
+        <h2 class="section-title">See the transformation</h2>
+        <p class="section-desc">
+          <!-- EDIT: intro line for this section -->
+          A look at recent jobs across paint correction, interiors, coatings and wheels.
+          Each panel cycles through photos from real Rusteez jobs.
+        </p>
+      </div>
+
+      <div class="work-grid">
+
+        <!-- WORK BLOCK 1 -->
+        <!-- EDIT: change data-label to your category name.
+             Add / remove <img> tags inside .rotator-track — the script
+             will automatically pick up every image in this block and rotate them. -->
+        <article class="work-block" data-label="Exterior &amp; Paint Correction">
+          <div class="rotator" data-interval="4000">
+            <div class="rotator-track">
+              <img src="Groupa1.jpeg" alt="Exterior detailing example 1" class="rotator-img is-active">
+              <img src="Groupa2.jpeg" alt="Exterior detailing example 2" class="rotator-img">
+              <img src="Groupa3.jpeg" alt="Exterior detailing example 3" class="rotator-img">
+              <img src="Groupa4.jpeg" alt="Exterior detailing example 3" class="rotator-img">
+              <!-- EDIT: add more <img> lines as needed -->
+            </div>
+            <div class="rotator-dots" aria-hidden="true"></div>
+          </div>
+          <h3 class="work-block-label">Precision</h3>
+        </article>
+
+        <!-- WORK BLOCK 2 -->
+        <article class="work-block" data-label="Interior Detail">
+          <div class="rotator" data-interval="4000">
+            <div class="rotator-track">
+              <img src="Groupb1.jpeg" alt="Interior detailing example 1" class="rotator-img is-active">
+              <img src="Groupb2.jpeg" alt="Interior detailing example 2" class="rotator-img">
+              <img src="GroupB3p.jpeg" alt="Interior detailing example 3" class="rotator-img">
+              <img src="Groupb3.jpeg" alt="Exterior detailing example 3" class="rotator-img">
+              <!-- The third photo b3p is the before image for b3 -->
+            </div>
+            <div class="rotator-dots" aria-hidden="true"></div>
+          </div>
+          <h3 class="work-block-label">Attention to Detail</h3>
+        </article>
+
+        <!-- WORK BLOCK 3 -->
+        <article class="work-block" data-label="Ceramic Coating">
+          <div class="rotator" data-interval="4000">
+            <div class="rotator-track">
+              <img src="GroupC1.jpeg" alt="Ceramic coating example 1" class="rotator-img is-active">
+              <img src="GroupC2.jpeg" alt="Ceramic coating example 2" class="rotator-img">
+              <img src="GroupC3.jpeg" alt="Ceramic coating example 3" class="rotator-img">
+              <img src="GroupC4.jpeg" alt="Ceramic coating example 3" class="rotator-img">
+            </div>
+            <div class="rotator-dots" aria-hidden="true"></div>
+          </div>
+          <h3 class="work-block-label">Clean &amp; Conditioned</h3>
+        </article>
+
+        <!-- WORK BLOCK 4 -->
+        <article class="work-block" data-label="Wheels &amp; Undercarriage">
+          <div class="rotator" data-interval="4000">
+            <div class="rotator-track">
+              <img src="GroupD1.jpeg" alt="Wheel detailing example 1" class="rotator-img is-active">
+              <img src="GroupD2.jpeg" alt="Wheel detailing example 2" class="rotator-img">
+              <img src="GroupD3.jpeg" alt="Wheel detailing example 3" class="rotator-img">
+              <img src="GroupD4.jpeg" alt="Wheel detailing example 4" class="rotator-img">
+            </div>
+            <div class="rotator-dots" aria-hidden="true"></div>
+          </div>
+          <h3 class="work-block-label">Professional Handling</h3>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- ABOUT US SECTION                -->
+    <!-- ============================= -->
+    <section id="about" class="about">
+      <div class="about-media" aria-hidden="true">
+        <!-- EDIT: replace with a real photo of you / the team / the shop -->
+        <img src="Logo.jpeg" alt="" />
+      </div>
+      <div class="about-content">
+        <p class="eyebrow">About Us</p>
+        <h2 class="section-title">Built on attention to detail</h2>
+        <!-- EDIT: replace with your real story — 2-4 short paragraphs -->
+        <p>
+          Rusteez started with one simple idea: most cars never get the care they deserve.
+          We set out to change that, one panel at a time.
+        </p>
+        <p>
+          Today we work on everything from daily commuters to show cars, using
+          professional-grade products and techniques refined over hundreds of jobs.
+        </p>
+        <ul class="about-stats">
+          <!-- EDIT: swap these stats for real numbers, or remove the block -->
+          <li><span class="stat-num">500+</span><span class="stat-label">Cars detailed</span></li>
+          <li><span class="stat-num">5★</span><span class="stat-label">Average rating</span></li>
+          <li><span class="stat-num">100%</span><span class="stat-label">Mobile service</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- ENQUIRY SECTION                 -->
+    <!-- ============================= -->
+    <section id="enquiry" class="enquiry">
+      <div class="enquiry-info">
+        <p class="eyebrow">Enquiry</p>
+        <h2 class="section-title">Get a quote</h2>
+        <p class="section-desc">
+          <!-- EDIT: contact-us description -->
+          Tell us a bit about your vehicle and what it needs. We'll get back to you
+          with a quote and the next available booking slot.
+        </p>
+
+        <div class="contact-card">
+          <span class="contact-label">Call or text</span>
+          <!-- EDIT: replace with your real number, keep the +61 04XX XXX XXX style if you like -->
+          <a href="tel:+610494345055" class="contact-phone">+61 0494345055</a>
+        </div>
+      </div>
+
+      <form class="enquiry-form" id="enquiry-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="mobile">Mobile</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="04XX XXX XXX" required />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your car and what you're after..." required></textarea>
+        </div>
+
+        <!--
+          EDIT: this form currently just validates and shows a confirmation message
+          in the browser — nothing is actually sent anywhere. To make it work for real,
+          either:
+          1) point the form at a service like Formspree / Netlify Forms and give it
+             a real `action` + `method="POST"`, or
+          2) wire up a fetch() call to your own backend in script.js
+             (see the handleEnquirySubmit function).
+        -->
+        <button type="submit" class="btn btn-primary btn-block">Send Enquiry</button>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ============================= -->
+  <!-- FOOTER                          -->
+  <!-- ============================= -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-mark">R</span>
+        <span class="logo-text">RUSTEEZ</span>
+        <!-- EDIT: short tagline -->
+        <p class="footer-tagline">Detailing done properly.</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#our-work">Our Work</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#enquiry">Enquiry</a></li>
+      </ul>
+
+      <div class="footer-contact">
+        <span class="contact-label">Call or text</span>
+        <!-- EDIT: keep this in sync with the number in the enquiry section above -->
+        <a href="tel:+610494345055" class="contact-phone">+61 0494345055</a>
+
+        <div class="social-icons">
+          <!-- EDIT: replace href="#" with your real Instagram link -->
+          <a href="https://www.instagram.com/rusteezmobiledetailing?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" class="social-icon" aria-label="Rusteez on Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="4.3" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/>
+            </svg>
+          </a>
+          <!-- EDIT: replace href="#" with your real TikTok link -->
+          <a href="https://www.tiktok.com/@rusteez.detaling?_r=1&_t=ZS-998vB7OnAlm" class="social-icon" aria-label="Rusteez on TikTok" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5 2c.3 2.2 1.7 3.9 3.9 4.2v2.7c-1.4 0-2.7-.4-3.9-1.2v6.7c0 3.2-2.6 5.6-5.7 5.6-3.1 0-5.7-2.4-5.7-5.6 0-3.1 2.6-5.6 5.7-5.6.4 0 .8 0 1.1.1v2.8a2.9 2.9 0 0 0-1.1-.2 2.9 2.9 0 1 0 0 5.8c1.6 0 2.9-1.3 2.9-3V2h2.8z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Rusteez. All rights reserved.</p>
+      <!-- EDIT: add ABN / business number here if required -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
