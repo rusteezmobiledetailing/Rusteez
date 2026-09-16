@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rusteez | Car Detailing</title>
-  <!-- EDIT: swap in a real meta description for search engines -->
-  <meta name="description" content="Rusteez Car Detailing — paint correction, interior detailing, ceramic coating and full vehicle care." />
+  <title>Rusteez Mobile Detailing | Car Detailing Adelaide &amp; Melbourne</title>
+  <meta name="description" content="Rusteez Mobile Detailing — mobile car detailing, paint correction, interior detailing and ceramic coating servicing Adelaide and Melbourne." />
+
+  <!-- Structured data: tells Google this is a local mobile detailing business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Rusteez Mobile Detailing",
+    "alternateName": "Rusteez",
+    "url": "https://rusteezmobiledetailing.com",
+    "telephone": "+61494345055",
+    "priceRange": "$$",
+    "areaServed": [
+      { "@type": "City", "name": "Adelaide" },
+      { "@type": "City", "name": "Melbourne" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/rusteezmobiledetailing",
+      "https://www.tiktok.com/@rusteez.detaling"
+    ]
+  }
+  </script>
 
   <!-- Fonts: Oswald (headings/industrial display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +33,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="canonical" href="https://rusteezmobiledetailing.com/" />
 
   <!-- EDIT: replace with your own favicon -->
   <link rel="icon" href="Logo.ico">
@@ -39,6 +61,7 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#our-work" class="nav-link">Our Work</a></li>
+        <li><a href="#packages" class="nav-link">Packages</a></li>
         <li><a href="#about" class="nav-link">About Us</a></li>
         <li><a href="#enquiry" class="nav-link nav-cta">Enquiry</a></li>
       </ul>
@@ -151,6 +174,76 @@
     </section>
 
     <!-- ============================= -->
+    <!-- PACKAGES SECTION                -->
+    <!-- ============================= -->
+    <!-- EDIT: package names, prices and inclusions below are placeholders — swap in your real tiers -->
+    <section id="packages" class="packages">
+      <div class="section-head">
+        <p class="eyebrow">Packages</p>
+        <h2 class="section-title">Choose your package</h2>
+        <p class="section-desc">
+          <!-- EDIT: intro line for this section -->
+          Three tiers to match your car and your budget — from a quick refresh to the full works.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+
+        <!-- PACKAGE 1 -->
+        <article class="package-card">
+          <div class="package-head">
+            <h3 class="package-name">Essential</h3>
+            <!-- EDIT: price -->
+            <p class="package-price">$149<span>/ vehicle</span></p>
+          </div>
+          <ul class="package-features">
+            <!-- EDIT: add / remove <li> lines to match what's included -->
+            <li>Exterior hand wash &amp; dry</li>
+            <li>Wheel &amp; tyre clean</li>
+            <li>Interior vacuum</li>
+            <li>Dash &amp; console wipe-down</li>
+            <li>Window clean, in &amp; out</li>
+          </ul>
+          <a href="#enquiry" class="btn btn-ghost btn-block package-cta">Send Enquiry</a>
+        </article>
+
+        <!-- PACKAGE 2 (highlighted as most popular — remove is-featured class and .package-badge to unhighlight) -->
+        <article class="package-card is-featured">
+          <span class="package-badge">Most Popular</span>
+          <div class="package-head">
+            <h3 class="package-name">Signature</h3>
+            <p class="package-price">$299<span>/ vehicle</span></p>
+          </div>
+          <ul class="package-features">
+            <li>Everything in Essential</li>
+            <li>Clay bar decontamination</li>
+            <li>Machine polish &amp; gloss boost</li>
+            <li>Full interior steam clean</li>
+            <li>Leather &amp; trim conditioning</li>
+          </ul>
+          <a href="#enquiry" class="btn btn-primary btn-block package-cta">Send Enquiry</a>
+        </article>
+
+        <!-- PACKAGE 3 -->
+        <article class="package-card">
+          <div class="package-head">
+            <h3 class="package-name">Ultimate</h3>
+            <p class="package-price">$549<span>/ vehicle</span></p>
+          </div>
+          <ul class="package-features">
+            <li>Everything in Signature</li>
+            <li>Multi-stage paint correction</li>
+            <li>Ceramic coating application</li>
+            <li>Engine bay detail</li>
+            <li>6-month shine guarantee</li>
+          </ul>
+          <a href="#enquiry" class="btn btn-ghost btn-block package-cta">Send Enquiry</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================= -->
     <!-- ABOUT US SECTION                -->
     <!-- ============================= -->
     <section id="about" class="about">
@@ -199,7 +292,8 @@
         </div>
       </div>
 
-      <form class="enquiry-form" id="enquiry-form" novalidate action="https://formspree.io/f/xjyverpn" method="POST">
+      <form class="enquiry-form" id="enquiry-form" novalidate 
+      action="https://formspree.io/f/xjyverpn" method="POST">
         <div class="form-row">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your full name" required />
