@@ -517,3 +517,4 @@ section { padding: 96px 24px; scroll-margin-top: var(--header-h); }
   .rotator::after { transition: none; }
   .rotator-img { transition: none; }
 }
+
