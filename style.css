@@ -281,6 +281,91 @@ section { padding: 96px 24px; scroll-margin-top: var(--header-h); }
 }
 
 /* ==============================================================
+   PACKAGES
+   ============================================================== */
+.packages-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+.package-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--graphite);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.package-card:hover { transform: translateY(-4px); border-color: var(--steel); }
+.package-card.is-featured {
+  border-color: var(--ember);
+  background: var(--graphite-2);
+  box-shadow: 0 14px 32px rgba(255, 90, 31, 0.14);
+}
+.package-badge {
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  background: var(--ember);
+  color: #14161A;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.package-head {
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.package-name { font-size: 1.3rem; margin-bottom: 8px; }
+.package-price {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--ember);
+  margin: 0;
+}
+.package-price span {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--steel);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: 4px;
+}
+.package-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.package-features li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.9rem;
+  color: var(--steel);
+}
+.package-features li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px;
+  width: 9px; height: 9px;
+  border-left: 2px solid var(--ember);
+  border-bottom: 2px solid var(--ember);
+  transform: rotate(-45deg);
+}
+
+/* ==============================================================
    ABOUT US
    ============================================================== */
 .about {
@@ -399,6 +484,7 @@ section { padding: 96px 24px; scroll-margin-top: var(--header-h); }
   .about, .enquiry { grid-template-columns: 1fr; }
   .about-media { order: -1; }
   .footer-top { grid-template-columns: 1fr; }
+  .packages-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
