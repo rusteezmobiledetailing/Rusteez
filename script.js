@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScrollState();
   initMobileNav();
   initWorkRotators();
-  initPackageCards();
   initEnquiryForm();
   initFooterYear();
 });
@@ -88,24 +87,6 @@ function initWorkRotators() {
       images[current].classList.add('is-active');
       if (dots[current]) dots[current].classList.add('is-active');
     }, interval);
-  });
-}
-
-/* --------------------------------------------------------------
-   Package cards
-   Each "Send Enquiry" button on a package card jumps to the
-   enquiry form (plain #enquiry anchor) and pre-fills the message
-   box so visitors don't have to type it themselves.
-   -------------------------------------------------------------- */
-function initPackageCards() {
-  const buttons = document.querySelectorAll('.package-cta');
-  const messageField = document.getElementById('message');
-  if (!buttons.length || !messageField) return;
-
-  buttons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      messageField.value = 'I want to enquire regarding the available packages';
-    });
   });
 }
 
@@ -196,4 +177,3 @@ function initFooterYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
-
