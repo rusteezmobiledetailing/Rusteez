@@ -122,11 +122,14 @@ section { padding: 96px 24px; scroll-margin-top: var(--header-h); }
 .logo-mark {
   width: 34px; height: 34px;
   border-radius: 50%;
-  background: var(--ember);
+  background: var(--ember); /* fallback colour, shows briefly while the image loads */
   color: #14161A;
   font-family: var(--font-display);
   font-weight: 700;
   display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;   /* clips the logo image to the circle */
+  object-fit: cover;  /* applies when .logo-mark is an <img> — fills the circle without distortion */
 }
 .logo-text {
   font-family: var(--font-display);
