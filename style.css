@@ -294,6 +294,9 @@ section { padding: 96px 24px; scroll-margin-top: var(--header-h); }
   gap: 28px;
   align-items: stretch;
 }
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
 .package-card {
   position: relative;
   display: flex;
